@@ -29,13 +29,19 @@ gem 'bcrypt', '~> 3.1.7'
 # additional
 gem 'devise'
 gem "paperclip", "~> 4.3"
+gem 'aws-sdk'
+
 gem 'stripe'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form'
+gem "figaro"
+
 
 # emailing
 gem 'mail_form'
 gem 'simple_form'
+
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
