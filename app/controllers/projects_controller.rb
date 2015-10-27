@@ -37,7 +37,8 @@ class ProjectsController < ApplicationController
       if @project.save
           format.html { 
             if user_signed_in?
-              redirect_to @project, notice: 'Project was successfully created.' 
+              # redirect_to @project, notice: 'Project was successfully created.' 
+              redirect_to projects_path, notice: 'Project was successfully created.' 
             else 
               redirect_to new_user_registration_path
             end 
