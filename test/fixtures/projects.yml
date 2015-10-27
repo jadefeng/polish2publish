@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  category_id: 1
+  genre_id: 1
+  state: MyString
+  photo: MyString
+  url: MyString
+  editor_id: 1
+  author_id: 1
+  page_no: 1
+  word_count: 1
+
+two:
+  title: MyString
+  category_id: 1
+  genre_id: 1
+  state: MyString
+  photo: MyString
+  url: MyString
+  editor_id: 1
+  author_id: 1
+  page_no: 1
+  word_count: 1

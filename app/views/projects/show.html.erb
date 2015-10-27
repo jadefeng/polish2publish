@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @project.title %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @project.category_id %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @project.genre_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @project.state %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= image_tag(@project.icon.url(:thumb)) %>
+</p>
+
+<p>
+  <strong>File:</strong>
+  <%=  link_to 'Download file', @project.file.url %>
+
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @project.url %>
+</p>
+
+<p>
+  <strong>Editor:</strong>
+  <%= @project.editor_id %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @project.author_id %>
+</p>
+
+<p>
+  <strong>Page no:</strong>
+  <%= @project.page_no %>
+</p>
+
+<p>
+  <strong>Word count:</strong>
+  <%= @project.word_count %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

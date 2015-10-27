@@ -1,0 +1,37 @@
+<%= bootstrap_form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.text_field :title %>
+    
+    <%= f.collection_select :category_id, Category.all, :id , :name %>
+    <%= f.collection_select :genre_id, Genre.all, :id , :name %>
+
+
+    <%= f.number_field :genre_id %>
+
+    <% if user_signed_in? && current_user.admin %>
+      <%= f.text_field :state_id %>
+      <%= f.number_field :editor_id %>
+      <%= f.number_field :author_id %>
+    <% end %> 
+
+    <%= f.number_field :page_no %>
+    <%= f.number_field :word_count %>
+    <%= f.file_field :icon %>
+    <%= f.file_field :file %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
