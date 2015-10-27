@@ -47,6 +47,9 @@ gem 'simple_form'
 #   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 #   gem 'byebug'
 # end
+group :production do
+	gem 'rails_12factor'
+end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -56,3 +59,5 @@ group :development do
   gem 'spring'
 end
 
+# run this version of ruby
+ruby "2.2.1"

@@ -22,15 +22,14 @@
       <div class="col-lg-6">
         <%= f.collection_select :category_id, Category.all, :id , :name %>
         <%= f.collection_select :genre_id, Genre.all, :id , :name %>
-        <%= f.collection_select :state_id, State.all, :id , :name %>
 
         <%= f.number_field :page_no %>
         <%= f.number_field :word_count %>
 
         <% if user_signed_in? && current_user.admin %>
-          <%= f.text_field :state_id %>
-          <%= f.number_field :editor_id %>
-          <%= f.number_field :author_id %>
+          <%= f.collection_select :state_id, State.all, :id , :name %>
+          <%= f.collection_select :editor_id, User.all, :id , :name %>
+          <%= f.collection_select :author_id, User.all, :id , :name %>
         <% end %> 
 
       </div>

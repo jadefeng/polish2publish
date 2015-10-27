@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   # GET /projects
@@ -14,7 +15,11 @@ class ProjectsController < ApplicationController
 
   # GET /projects/new
   def new
-    @project = Project.new
+    if !user_signed_in?
+      redirect_to new_user_registration_path
+    else 
+      @project = Project.new
+    end
   end
 
   # GET /projects/1/edit
@@ -25,6 +30,8 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
+    @project.author_id = current_user.id
+    @project.state_id = 0 #set default to new
 
     respond_to do |format|
       if @project.save
@@ -41,7 +48,7 @@ class ProjectsController < ApplicationController
         format.html { render :new }
         format.json { render json: @project.errors, status: :unprocessable_entity }
       end
-    end
+    end 
   end
 
   # PATCH/PUT /projects/1
