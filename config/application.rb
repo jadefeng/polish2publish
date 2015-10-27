@@ -24,3 +24,6 @@ module P2p
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
+
+# setting this up for deployment purposes
+# config.serve_static_assets = true
