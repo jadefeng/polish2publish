@@ -26,4 +26,3 @@ module P2p
 end
 
 # setting this up for deployment purposes
-# config.serve_static_assets = true
