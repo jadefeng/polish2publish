@@ -1,6 +1,25 @@
-<p id="notice"><%= notice %></p>
+<h1>Manuscripts</h1>
 
-<h1>Listing Projects</h1>
+<div class="row">
+  <% @projects.each do |project| %>
+      <div class="col-md-4">
+              <div class="well well-sm">
+                  <div class="media">
+                          <%= link_to image_tag( project.icon.url(:thumb) ) , project.file.url %>
+                      <div class="media-body">
+                          <h4 class="media-heading"><%= project.title %></h4>
+                      <p><span class="label label-info"><%= project.category.name %></span> <span class="label label-warning"><%= project.genre.name %></span></p>
+                          <p>
+                          Author: <%= project.author.name %>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+  <% end %>
+</div>
+
 
 <table>
   <thead>

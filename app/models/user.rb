@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-# Source : http://www.theodinproject.com/ruby-on-rails/active-record-associations
+	# Source : http://www.theodinproject.com/ruby-on-rails/active-record-associations
     has_many :authored_projects, :foreign_key => "author_id", :class_name => "Project"
     has_many :edited_projects, :foreign_key => "editor_id", :class_name => "Project"
 

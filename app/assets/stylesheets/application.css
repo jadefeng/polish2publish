@@ -32,8 +32,12 @@ header {
 	padding: 0;
 }
 
-#contactForm input::-moz-placeholder,
+/*#contactForm input::-moz-placeholder,
 #contactForm input::-webkit-input-placeholder 
  {
 	color: white;
+}*/
+
+.genre-img {
+	height: 200px;
 }
