@@ -10,25 +10,31 @@
       </ul>
     </div>
   <% end %>
+    <div class="row">
+      <div class="col-lg-6">
 
-    <%= f.text_field :title %>
-    
-    <%= f.collection_select :category_id, Category.all, :id , :name %>
-    <%= f.collection_select :genre_id, Genre.all, :id , :name %>
+        <%= f.text_field :title %>
 
+        <%= f.file_field :icon %>
+        <%= f.file_field :file %>
+      </div>
 
-    <%= f.number_field :genre_id %>
+      <div class="col-lg-6">
+        <%= f.collection_select :category_id, Category.all, :id , :name %>
+        <%= f.collection_select :genre_id, Genre.all, :id , :name %>
+        <%= f.collection_select :state_id, State.all, :id , :name %>
 
-    <% if user_signed_in? && current_user.admin %>
-      <%= f.text_field :state_id %>
-      <%= f.number_field :editor_id %>
-      <%= f.number_field :author_id %>
-    <% end %> 
+        <%= f.number_field :page_no %>
+        <%= f.number_field :word_count %>
 
-    <%= f.number_field :page_no %>
-    <%= f.number_field :word_count %>
-    <%= f.file_field :icon %>
-    <%= f.file_field :file %>
+        <% if user_signed_in? && current_user.admin %>
+          <%= f.text_field :state_id %>
+          <%= f.number_field :editor_id %>
+          <%= f.number_field :author_id %>
+        <% end %> 
+
+      </div>
+    </div>
 
   <div class="actions">
     <%= f.submit %>

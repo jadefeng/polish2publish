@@ -33,6 +33,10 @@ gem 'stripe'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form'
 
+# emailing
+gem 'mail_form'
+gem 'simple_form'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

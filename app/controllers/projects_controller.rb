@@ -28,8 +28,15 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if @project.save
-        format.html { redirect_to @project, notice: 'Project was successfully created.' }
-        format.json { render :show, status: :created, location: @project }
+          format.html { 
+            if user_signed_in?
+              redirect_to @project, notice: 'Project was successfully created.' 
+            else 
+              redirect_to new_user_registration_path
+            end 
+          }
+          format.json { render :show, status: :created, location: @project }
+
       else
         format.html { render :new }
         format.json { render json: @project.errors, status: :unprocessable_entity }

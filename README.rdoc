@@ -1,28 +1,7 @@
-== README
+== POLISH2PUBLISH
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Uber for editors. Verified, professional editors that know how to get your work in its best shape to be noticed and published! We are a network of editors for budding writers that want their work to be showcased in the best light. Budding writer who wants to get published? Tired of being knocked back? Subscribe to polish2publish.com and we'll help you polish your work to give it the best chance to be accepted by publishers! #Polish2Publish
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+Ruby on Rails

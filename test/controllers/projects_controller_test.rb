@@ -18,7 +18,7 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test "should create project" do
     assert_difference('Project.count') do
-      post :create, project: { author_id: @project.author_id, category_id: @project.category_id, editor_id: @project.editor_id, genre_id: @project.genre_id, page_no: @project.page_no, photo: @project.photo, state: @project.state, title: @project.title, url: @project.url, word_count: @project.word_count }
+      post :create, project: { author_id: @project.author_id, category_id: @project.category_id, editor_id: @project.editor_id, genre_id: @project.genre_id, page_no: @project.page_no, photo: @project.photo, state: @project.state_id, title: @project.title, url: @project.url, word_count: @project.word_count }
     end
 
     assert_redirected_to project_path(assigns(:project))
@@ -35,7 +35,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test "should update project" do
-    patch :update, id: @project, project: { author_id: @project.author_id, category_id: @project.category_id, editor_id: @project.editor_id, genre_id: @project.genre_id, page_no: @project.page_no, photo: @project.photo, state: @project.state, title: @project.title, url: @project.url, word_count: @project.word_count }
+    patch :update, id: @project, project: { author_id: @project.author_id, category_id: @project.category_id, editor_id: @project.editor_id, genre_id: @project.genre_id, page_no: @project.page_no, photo: @project.photo, state: @project.state_id, title: @project.title, url: @project.url, word_count: @project.word_count }
     assert_redirected_to project_path(assigns(:project))
   end
 

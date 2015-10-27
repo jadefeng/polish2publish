@@ -25,9 +25,9 @@
         <td><%= project.title %></td>
         <td><%= project.category_id %></td>
         <td><%= project.genre_id %></td>
-        <td><%= project.state %></td>
-        <td><%= project.photo %></td>
-        <td><%= project.url %></td>
+        <td><%= project.state_id %></td>
+        <td><%= image_tag( project.icon.url(:thumb) ) %></td>
+        <td><%= link_to 'Download file', project.file.url %></td>
         <td><%= project.editor_id %></td>
         <td><%= project.author_id %></td>
         <td><%= project.page_no %></td>

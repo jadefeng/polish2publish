@@ -45,4 +45,9 @@ academic = Genre.create([
 	{id: 19, category_id: 2, name: "History/Philosophy"}, 
 	])
 
-
+states = State.create([
+	{id: 0, name: "Open"},
+	{id: 1, name: "Editing"},
+	{id: 2, name: "Completed"},
+	{id: 3, name: "Cancelled"},
+	])

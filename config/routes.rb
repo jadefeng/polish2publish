@@ -5,8 +5,12 @@ Rails.application.routes.draw do
   resources :genres
   resources :categories
   get 'pages/about'
-  resources :users
+  
   devise_for :users
+  resources :users
+
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
 
   root :to => "pages#index"
 

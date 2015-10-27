@@ -54,24 +54,22 @@
               <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> </li>
               <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
             <% end %>
+              <li><%= link_to "Submit Manuscript", new_project_path, :class => "navbar-link" %> </li>
           </ul>
         </div>
       </div>
     </div>
 
-
-
-<% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
-
   <% if @home_page %>
     <%= yield %>
   <% else %>
     <div class="container">
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
       <%= yield %>
     </div>
 
