@@ -29,7 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 # additional
 gem 'devise'
 gem "paperclip", "~> 4.3"
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 
 gem 'stripe'
 gem 'twitter-bootstrap-rails'
