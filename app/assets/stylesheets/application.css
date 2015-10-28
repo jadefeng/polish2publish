@@ -41,3 +41,8 @@ header {
 .genre-img {
 	height: 200px;
 }
+
+.header-logo {
+	height: 400px;
+	width: auto;
+}
