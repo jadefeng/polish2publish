@@ -6,7 +6,12 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @user = current_user
-    @projects = Project.where(author_id == @user.id)
+
+    if @user.admin == true
+      @projects = Project.all
+    else 
+      @projects = Project.where(author_id: @user.id) || []
+    end
   end
 
   # GET /projects/1
