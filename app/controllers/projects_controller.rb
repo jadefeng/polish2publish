@@ -44,7 +44,7 @@ class ProjectsController < ApplicationController
           format.html { 
             if user_signed_in?
               # redirect_to @project, notice: 'Project was successfully created.' 
-              redirect_to projects_path, notice: 'Project was successfully created.' 
+              redirect_to projects_path, notice: 'Manuscript was successfully submitted. We will get back to you within the next 24 hrs to get the ball rolling!' 
             else 
               redirect_to new_user_registration_path
             end 

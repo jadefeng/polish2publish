@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   resources :genres
   resources :categories
   
-  get 'pages/about'
+  get '/about' => "pages#about"
+  get '/pricing' => "pages#pricing"
   
   # devise_for :users
   devise_for :users, controllers: { registrations: "registrations" }
